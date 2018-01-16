@@ -1,5 +1,4 @@
 require 'simplecov'
-require 'simplecov-summary'
 
 SimpleCov.start do
   command_name File.basename(ENV['BUNDLE_GEMFILE'], '.gemfile')
@@ -20,19 +19,8 @@ require_relative 'contexts/paranoid'
 require_relative 'examples/model'
 
 RSpec.configure do |config|
-  config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
-
-  config.after(:suite) do
-    if SimpleCov.running
-      silence_stream(STDOUT) do
-        SimpleCov::Formatter::HTMLFormatter.new.format(SimpleCov.result)
-      end
-
-      SimpleCov::Formatter::SummaryFormatter.new.format(SimpleCov.result)
-    end
-  end
 
   # Run specs in random order to surface order dependencies. If you find an
   # order dependency and want to debug it, you can fix the order by providing

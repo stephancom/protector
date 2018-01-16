@@ -6,7 +6,6 @@ gem 'colored'
 gem 'pry'
 gem 'rspec'
 gem 'simplecov', require: false
-gem 'simplecov-summary'
 
 gem 'appraisal', github: 'thoughtbot/appraisal'
 
