@@ -63,7 +63,7 @@ module Protector
         end
 
         def relation
-          return false unless scoped?
+          return @model.all unless scoped?
 
           @relation ||= eval_scope_procs @model
         end
