@@ -17,7 +17,7 @@ module Protector
             alias_method 'scoped', 'scope_with_protector'
           end
 
-          alias_method :build_record_without_protector, :protector
+          alias_method :build_record_without_protector, :build_record
           alias_method :build_record, :build_record_with_protector
         end
 
