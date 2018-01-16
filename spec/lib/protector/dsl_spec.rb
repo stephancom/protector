@@ -13,7 +13,7 @@ describe Protector::DSL do
 
     it "throws error for empty subect" do
       base = @base.new
-      expect { base.protector_subject }.to raise_error
+      expect { base.protector_subject }.to raise_error RuntimeError
     end
 
     it "accepts nil as a subject" do
@@ -32,7 +32,7 @@ describe Protector::DSL do
       base.restrict!("universe")
       base.protector_subject.should == "universe"
       base.unrestrict!
-      expect { base.protector_subject }.to raise_error
+      expect { base.protector_subject }.to raise_error RuntimeError
     end
 
     it "respects `insecurely`" do
