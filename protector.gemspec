@@ -6,8 +6,8 @@ require 'protector/version'
 Gem::Specification.new do |spec|
   spec.name          = "protector"
   spec.version       = Protector::VERSION
-  spec.authors       = ["Boris Staal"]
-  spec.email         = ["boris@staal.io"]
+  spec.authors       = ["Boris Staal", "stephan.com"]
+  spec.email         = ["boris@staal.io", "stephan@stephan.com"]
   spec.description   = %q{Comfortable (seriously) white-list security restrictions for models on a field level}
   spec.summary       = %q{Protector is a successor to the Heimdallr gem: it hits the same goals keeping the Ruby way}
   spec.homepage      = "https://github.com/inossidabile/protector"
